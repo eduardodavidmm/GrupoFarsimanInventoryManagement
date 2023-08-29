@@ -20,9 +20,9 @@
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
-      <div class="logo pull-left">Invantarios Farsiman</div>
+      <img src="libs/images/logoheader.png" class="logo pull-left" alt="">
       <div class="header-content">
-      <div class="header-date pull-left">
+      <div class="pull-left textheader">
       </div>
       <div class="pull-right clearfix">
         <ul class="info-menu list-inline list-unstyled">
@@ -56,7 +56,7 @@
       </div>
      </div>
     </header>
-    <div class="sidebar">
+    <div class="sidebar sidebarcolor">
       <?php if($user['user_level'] === '1'): ?>
         <!-- admin menu -->
       <?php include_once('admin_menu.php');?>

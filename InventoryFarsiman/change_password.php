@@ -24,10 +24,10 @@
             $result = $db->query($sql);
                 if($result && $db->affected_rows() === 1):
                   $session->logout();
-                  $session->msg('s',"Login with your new password.");
+                  $session->msg('s',"Nueva contraseña");
                   redirect('index.php', false);
                 else:
-                  $session->msg('d',' Sorry failed to updated!');
+                  $session->msg('d','Error al cargar');
                   redirect('change_password.php', false);
                 endif;
     } else {
@@ -39,21 +39,21 @@
 <?php include_once('layouts/header.php'); ?>
 <div class="login-page">
     <div class="text-center">
-       <h3>Change your password</h3>
+       <h3>Cambio de Contraseña</h3>
      </div>
      <?php echo display_msg($msg); ?>
       <form method="post" action="change_password.php" class="clearfix">
         <div class="form-group">
-              <label for="newPassword" class="control-label">New password</label>
+              <label for="newPassword" class="control-label">Nueva contraseña</label>
               <input type="password" class="form-control" name="new-password" placeholder="New password">
         </div>
         <div class="form-group">
-              <label for="oldPassword" class="control-label">Old password</label>
+              <label for="oldPassword" class="control-label">Contraseña anterior</label>
               <input type="password" class="form-control" name="old-password" placeholder="Old password">
         </div>
         <div class="form-group clearfix">
                <input type="hidden" name="id" value="<?php echo (int)$user['id'];?>">
-                <button type="submit" name="update" class="btn btn-info">Change</button>
+                <button type="submit" name="update" class="btn btn-info">Cambiar</button>
         </div>
     </form>
 </div>

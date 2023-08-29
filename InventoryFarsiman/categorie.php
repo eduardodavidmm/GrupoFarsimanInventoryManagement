@@ -15,10 +15,10 @@
       $sql  = "INSERT INTO categories (name)";
       $sql .= " VALUES ('{$cat_name}')";
       if($db->query($sql)){
-        $session->msg("s", "Successfully Added New Category");
+        $session->msg("s", "Nueva Categoria");
         redirect('categorie.php',false);
       } else {
-        $session->msg("d", "Sorry Failed to insert.");
+        $session->msg("d", "Error");
         redirect('categorie.php',false);
       }
    } else {
@@ -40,7 +40,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Category</span>
+            <span>Añadir Nueva Categoria</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -48,7 +48,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add Category</button>
+            <button type="submit" name="add_cat" class="btn btn-primary">Añadir Categoria</button>
         </form>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>All Categories</span>
+          <span>Categorias</span>
        </strong>
       </div>
         <div class="panel-body">
@@ -66,8 +66,8 @@
             <thead>
                 <tr>
                     <th class="text-center" style="width: 50px;">#</th>
-                    <th>Categories</th>
-                    <th class="text-center" style="width: 100px;">Actions</th>
+                    <th>Categorias</th>
+                    <th class="text-center" style="width: 100px;">Acciones</th>
                 </tr>
             </thead>
             <tbody>

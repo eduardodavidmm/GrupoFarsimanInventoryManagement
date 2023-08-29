@@ -1,8 +1,7 @@
 <?php
-$page_title = 'Sales Report';
+$page_title = 'Reporte de Ventas';
 $results = '';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
    page_require_level(3);
 ?>
 <?php
@@ -20,7 +19,7 @@ $results = '';
     endif;
 
   } else {
-    $session->msg("d", "Select dates");
+    $session->msg("d", "Selecciona Fechas");
     redirect('sales_report.php', false);
   }
 ?>
@@ -28,7 +27,7 @@ $results = '';
 <html lang="en-US">
  <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <title>Default Page Title</title>
+   <title>Reporte</title>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
    <style>
    @media print {
@@ -79,17 +78,17 @@ $results = '';
   <?php if($results): ?>
     <div class="page-break">
        <div class="sale-head">
-           <h1>Inventory Management System - Sales Report</h1>
-           <strong><?php if(isset($start_date)){ echo $start_date;}?> TILL DATE <?php if(isset($end_date)){echo $end_date;}?> </strong>
+           <h1>Grupo Farsiman - Reporte de Salidas</h1>
+           <strong><?php if(isset($start_date)){ echo $start_date;}?> Hasta Fecha <?php if(isset($end_date)){echo $end_date;}?> </strong>
        </div>
       <table class="table table-border">
         <thead>
           <tr>
-              <th>Date</th>
-              <th>Product Title</th>
-              <th>Buying Price</th>
-              <th>Selling Price</th>
-              <th>Total Qty</th>
+              <th>Fecha</th>
+              <th>Producto</th>
+              <th>Costo</th>
+              <th>Precio de Venta</th>
+              <th>Total Cantidad</th>
               <th>TOTAL</th>
           </tr>
         </thead>
@@ -110,14 +109,14 @@ $results = '';
         <tfoot>
          <tr class="text-right">
            <td colspan="4"></td>
-           <td colspan="1">Grand Total</td>
+           <td colspan="1">Total</td>
            <td> $
            <?php echo number_format(total_price($results)[0], 2);?>
           </td>
          </tr>
          <tr class="text-right">
            <td colspan="4"></td>
-           <td colspan="1">Profit</td>
+           <td colspan="1">Ganancia</td>
            <td> $<?php echo number_format(total_price($results)[1], 2);?></td>
          </tr>
         </tfoot>
@@ -125,7 +124,7 @@ $results = '';
     </div>
   <?php
     else:
-        $session->msg("d", "Sorry no sales has been found. ");
+        $session->msg("d", "Error, no se encontraron Datos. ");
         redirect('sales_report.php', false);
      endif;
   ?>

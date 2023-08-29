@@ -1,11 +1,9 @@
 <?php
-  $page_title = 'All User';
+  $page_title = 'Todos los usuarios';
   require_once('includes/load.php');
 ?>
 <?php
-// Checkin What level user has permission to view this page
  page_require_level(1);
-//pull out all user form database
  $all_users = find_all_user();
 ?>
 <?php include_once('layouts/header.php'); ?>
@@ -20,21 +18,21 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Users</span>
+          <span>Usuarios</span>
        </strong>
-         <a href="add_user.php" class="btn btn-info pull-right">Add New User</a>
+         <a href="add_user.php" class="btn btn-info pull-right">Añadir Nuevo Usuario</a>
       </div>
      <div class="panel-body">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Name </th>
-            <th>Username</th>
-            <th class="text-center" style="width: 15%;">User Role</th>
-            <th class="text-center" style="width: 10%;">Status</th>
-            <th style="width: 20%;">Last Login</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th>Nombre </th>
+            <th>Usuario</th>
+            <th class="text-center" style="width: 15%;">Rol</th>
+            <th class="text-center" style="width: 10%;">Estado</th>
+            <th style="width: 20%;">Ultimo Ingreso</th>
+            <th class="text-center" style="width: 100px;">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -46,9 +44,9 @@
            <td class="text-center"><?php echo remove_junk(ucwords($a_user['group_name']))?></td>
            <td class="text-center">
            <?php if($a_user['status'] === '1'): ?>
-            <span class="label label-success"><?php echo "Active"; ?></span>
+            <span class="label label-success"><?php echo "Activo"; ?></span>
           <?php else: ?>
-            <span class="label label-danger"><?php echo "Deactive"; ?></span>
+            <span class="label label-danger"><?php echo "Inactivo"; ?></span>
           <?php endif;?>
            </td>
            <td><?php echo read_date($a_user['last_login'])?></td>

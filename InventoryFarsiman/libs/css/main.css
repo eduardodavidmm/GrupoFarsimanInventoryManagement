@@ -73,6 +73,9 @@ body{
 .bg-blue2{
 	background-color: #7a83ee;
 }
+.panels{
+  background-color: #fff;
+}
 .panel-default >.panel-heading{
   background-color: #fff;
   border-bottom: 2px solid #3498DB;
@@ -81,7 +84,7 @@ body{
   letter-spacing: .5px;
   padding: 15px;
 }.panel-box{
-  width: 100%;
+  width: 30%;
   height: 100%;
   text-align: center;
   border: none;
@@ -187,7 +190,7 @@ body{
   padding: 65px 0 0;
   height: 100%;
   width: 250px;
-  background: #272727;
+  background: #212670 !important;
   border-right: 1px solid #ddd;
   text-align: center;
 }.sidebar ul li:hover,.submenu ul li:hover{
@@ -224,7 +227,7 @@ body{
   display: none;
   position: relative;
 }ul.submenu li a:hover{
-  background-color:#35404d;
+  background-color:#212670;
 }ul.submenu li a {
   padding-left: 45px;
 }ul.submenu li:before{
@@ -334,4 +337,8 @@ input[type=file]{
 }img.img-size-2{
   width: 125px;
   height: 125px;
+}
+
+.sidebarcolor {
+  background-color: #212670 !important;
 }

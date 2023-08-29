@@ -57,7 +57,7 @@
 
         }
     } else {
-        $html ='<tr><td>product name not resgister in database</td></tr>';
+        $html ='<tr><td>No existe Coincidencia</td></tr>';
     }
 
     echo json_encode($html);

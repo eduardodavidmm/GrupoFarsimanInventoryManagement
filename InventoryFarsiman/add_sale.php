@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Add Sale';
+  $page_title = 'Orden de Salida';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(3);
@@ -24,10 +24,10 @@
 
                 if($db->query($sql)){
                   update_product_qty($s_qty,$p_id);
-                  $session->msg('s',"Sale added. ");
+                  $session->msg('s',"Orden Añadida ");
                   redirect('add_sale.php', false);
                 } else {
-                  $session->msg('d',' Sorry failed to add!');
+                  $session->msg('d',' Error al añadir Orden');
                   redirect('add_sale.php', false);
                 }
         } else {
@@ -45,9 +45,9 @@
         <div class="form-group">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-primary">Find It</button>
+              <button type="submit" class="btn btn-primary">Buscar</button>
             </span>
-            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="Search for product name">
+            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="Buscar Nombre del Producto">
          </div>
          <div id="result" class="list-group"></div>
         </div>
@@ -61,19 +61,20 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Sale Eidt</span>
+          <span>Editar</span>
        </strong>
       </div>
       <div class="panel-body">
         <form method="post" action="add_sale.php">
          <table class="table table-bordered">
            <thead>
-            <th> Item </th>
-            <th> Price </th>
-            <th> Qty </th>
+            <th> Producto </th>
+            <th> Precio </th>
+            <th> Cantidad </th>
             <th> Total </th>
-            <th> Date</th>
-            <th> Action</th>
+            <th> Fecha de Ingreso</th>
+            <th> Vencimiento</th>
+            <th> Accion</th>
            </thead>
              <tbody  id="product_info"> </tbody>
          </table>

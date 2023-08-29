@@ -22,7 +22,7 @@
         <div class="panel-heading clearfix">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Daily Sales</span>
+            <span>Ventas Diarias</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -31,9 +31,9 @@
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Product name </th>
-                <th class="text-center" style="width: 15%;"> Quantity sold</th>
+                <th class="text-center" style="width: 15%;"> Cantidad Vendida</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
-                <th class="text-center" style="width: 15%;"> Date </th>
+                <th class="text-center" style="width: 15%;"> Fecha </th>
              </tr>
             </thead>
            <tbody>

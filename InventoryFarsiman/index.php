@@ -14,14 +14,14 @@
       <form method="post" action="auth.php" class="clearfix">
         <div class="form-group">
               <label for="username" class="control-label">Nombre de Usuario</label>
-              <input type="name" class="form-control" name="username" placeholder="Username">
+              <input type="name" class="form-control" name="username" placeholder="Usuario">
         </div>
         <div class="form-group">
             <label for="Password" class="control-label">Contraseña</label>
-            <input type="password" name= "password" class="form-control" placeholder="Password">
+            <input type="password" name= "password" class="form-control" placeholder="Contrasena">
         </div>
         <div class="form-group">
-          <center> <button type="submit" class="btn btn-danger btn-login" style="border-radius:0%">Ingresar</button></center>
+          <center> <button type="submit" class="btn btn-primary btn-login rounded-pill" style="border-radius:0%">INGRESAR</button></center>
         </div>
     </form>
 </div>
