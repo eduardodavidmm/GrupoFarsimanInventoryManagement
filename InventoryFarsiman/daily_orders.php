@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Daily Sales';
+  $page_title = 'Ordenes Diarias';
   require_once('includes/load.php');
    page_require_level(3);
 ?>
@@ -7,7 +7,7 @@
 <?php
  $year  = date('Y');
  $month = date('m');
- $sales = dailySales($year,$month);
+ $orders = dailyOrders($year,$month);
 ?>
 <?php include_once('layouts/header.php'); ?>
 <div class="row">
@@ -36,13 +36,13 @@
              </tr>
             </thead>
            <tbody>
-             <?php foreach ($sales as $sale):?>
+             <?php foreach ($orders as $order):?>
              <tr>
                <td class="text-center"><?php echo count_id();?></td>
-               <td><?php echo remove_junk($sale['name']); ?></td>
-               <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
-               <td class="text-center"><?php echo remove_junk($sale['total_saleing_price']); ?></td>
-               <td class="text-center"><?php echo $sale['date']; ?></td>
+               <td><?php echo remove_junk($order['name']); ?></td>
+               <td class="text-center"><?php echo (int)$order['qty']; ?></td>
+               <td class="text-center"><?php echo remove_junk($order['total_saleing_price']); ?></td>
+               <td class="text-center"><?php echo $order['date']; ?></td>
              </tr>
              <?php endforeach;?>
            </tbody>

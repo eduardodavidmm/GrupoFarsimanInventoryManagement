@@ -6,11 +6,11 @@
 <?php
  $c_categorie     = count_by_id('categories');
  $c_product       = count_by_id('products');
- $c_sale          = count_by_id('sales');
+ $c_order          = count_by_id('orders');
  $c_user          = count_by_id('users');
  $products_sold   = find_higest_saleing_product('10');
  $recent_products = find_recent_product_added('5');
- $recent_sales    = find_recent_sale_added('5')
+ $recent_orders    = find_recent_order_added('5')
 ?>
 <?php include_once('layouts/header.php'); ?>
 
@@ -62,14 +62,14 @@
     </div>
 	</a>
 	
-	<a href="sales.php" style="color:black;">
+	<a href="orders.php" style="color:black;">
     <div class="col-md-3">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-green">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
         <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
+          <h2 class="margin-top"> <?php  echo $c_order['total']; ?></h2>
           <p class="text-muted">Salidas</p>
         </div>
        </div>
@@ -113,7 +113,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Ultimas Ventas</span>
+            <span>Ultimas Salidas</span>
           </strong>
         </div>
         <div class="panel-body">
@@ -127,16 +127,16 @@
          </tr>
        </thead>
        <tbody>
-         <?php foreach ($recent_sales as  $recent_sale): ?>
+         <?php foreach ($recent_orders as  $recent_order): ?>
          <tr>
            <td class="text-center"><?php echo count_id();?></td>
            <td>
-            <a href="edit_sale.php?id=<?php echo (int)$recent_sale['id']; ?>">
-             <?php echo remove_junk(first_character($recent_sale['name'])); ?>
+            <a href="edit_order.php?id=<?php echo (int)$recent_order['id']; ?>">
+             <?php echo remove_junk(first_character($recent_order['name'])); ?>
            </a>
            </td>
-           <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td>$<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
+           <td><?php echo remove_junk(ucfirst($recent_order['date'])); ?></td>
+           <td>$<?php echo remove_junk(first_character($recent_order['price'])); ?></td>
         </tr>
 
        <?php endforeach; ?>

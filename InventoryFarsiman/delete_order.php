@@ -3,19 +3,19 @@
   page_require_level(3);
 ?>
 <?php
-  $d_sale = find_by_id('sales',(int)$_GET['id']);
-  if(!$d_sale){
+  $d_order = find_by_id('orders',(int)$_GET['id']);
+  if(!$d_order){
     $session->msg("d","Error en Codigo de Venta");
-    redirect('sales.php');
+    redirect('orders.php');
   }
 ?>
 <?php
-  $delete_id = delete_by_id('sales',(int)$d_sale['id']);
+  $delete_id = delete_by_id('orders',(int)$d_order['id']);
   if($delete_id){
       $session->msg("s","Venta Eliminada");
-      redirect('sales.php');
+      redirect('orders.php');
   } else {
       $session->msg("d","Error al eliminar");
-      redirect('sales.php');
+      redirect('orders.php');
   }
 ?>

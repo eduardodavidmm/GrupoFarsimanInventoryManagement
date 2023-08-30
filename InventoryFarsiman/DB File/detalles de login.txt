@@ -1,18 +1,18 @@
-**Database Name: inventoryfarsiman**
+**DB Nombre: inventoryfarsiman**
 
-**Developed by Eduardo David Maldonado**
+*Eduardo David Maldonado**
 
-**Admin Login Details**
+**Usuario Jefe de Tienda Administrador / Grupo Farsiman 2023**
 
 Username: admin
 Password: admin
 
-**Special User Login Details**
+**Usuario Especial**
 
-Username: boss
+Username: special
 Password: special
 
-**User Login Details**
+**Usuario regular**
 
 Username: user
 Password: user 

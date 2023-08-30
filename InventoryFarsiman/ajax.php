@@ -49,7 +49,7 @@
           $html  .= "<input type=\"date\" class=\"form-control datePicker\" name=\"date\" data-date data-date-format=\"yyyy-mm-dd\">";
           $html  .= "</td>";
           $html  .= "<td>";
-          $html  .= "<button type=\"submit\" name=\"add_sale\" class=\"btn btn-primary\">Dar Salida</button>";
+          $html  .= "<button type=\"submit\" name=\"add_order\" class=\"btn btn-primary\">Dar Salida</button>";
           $html  .= "</td>";
           $html  .= "</tr>";
 

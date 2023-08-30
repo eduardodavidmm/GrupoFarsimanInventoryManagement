@@ -5,7 +5,7 @@
 ?>
 <?php
  $year = date('Y');
- $sales = monthlySales($year);
+ $orders = monthlyOrders($year);
 ?>
 <?php include_once('layouts/header.php'); ?>
 <div class="row">
@@ -34,13 +34,13 @@
              </tr>
             </thead>
            <tbody>
-             <?php foreach ($sales as $sale):?>
+             <?php foreach ($orders as $orders):?>
              <tr>
                <td class="text-center"><?php echo count_id();?></td>
-               <td><?php echo remove_junk($sale['name']); ?></td>
-               <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
-               <td class="text-center"><?php echo remove_junk($sale['total_saleing_price']); ?></td>
-               <td class="text-center"><?php echo $sale['date']; ?></td>
+               <td><?php echo remove_junk($orders['name']); ?></td>
+               <td class="text-center"><?php echo (int)$orders['qty']; ?></td>
+               <td class="text-center"><?php echo remove_junk($orders['total_saleing_price']); ?></td>
+               <td class="text-center"><?php echo $orders['date']; ?></td>
              </tr>
              <?php endforeach;?>
            </tbody>

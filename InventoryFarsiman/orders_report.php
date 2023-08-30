@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Reporte de Ventas';
+$page_title = 'Reporte de Salidas';
   require_once('includes/load.php');
    page_require_level(3);
 ?>
@@ -16,7 +16,7 @@ $page_title = 'Reporte de Ventas';
 
       </div>
       <div class="panel-body">
-          <form class="clearfix" method="post" action="sale_report_process.php">
+          <form class="clearfix" method="post" action="order_report_process.php">
             <div class="form-group">
               <label class="form-label">Rango de Fechas</label>
                 <div class="input-group">

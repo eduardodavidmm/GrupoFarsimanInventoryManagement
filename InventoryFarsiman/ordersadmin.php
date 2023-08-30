@@ -4,7 +4,7 @@
    page_require_level(3);
 ?>
 <?php
-$sales = find_all_sale();
+$orders = find_all_order();
 ?>
 <?php include_once('layouts/header.php'); ?>
 <div class="row">
@@ -21,7 +21,7 @@ $sales = find_all_sale();
             <span>Todas las Salidas</span>
           </strong>
           <div class="pull-right">
-            <a href="add_sale.php" class="btn btn-primary">Añadir Salida</a>
+            <a href="add_order.php" class="btn btn-primary">Añadir Salida</a>
           </div>
         </div>
         <div class="panel-body">
@@ -37,19 +37,19 @@ $sales = find_all_sale();
              </tr>
             </thead>
            <tbody>
-             <?php foreach ($sales as $sale):?>
+             <?php foreach ($orders as $order):?>
              <tr>
                <td class="text-center"><?php echo count_id();?></td>
-               <td><?php echo remove_junk($sale['name']); ?></td>
-               <td class="text-center"><?php echo (int)$sale['qty']; ?></td>
-               <td class="text-center"><?php echo remove_junk($sale['price']); ?></td>
-               <td class="text-center"><?php echo $sale['date']; ?></td>
+               <td><?php echo remove_junk($order['name']); ?></td>
+               <td class="text-center"><?php echo (int)$order['qty']; ?></td>
+               <td class="text-center"><?php echo remove_junk($order['price']); ?></td>
+               <td class="text-center"><?php echo $order['date']; ?></td>
                <td class="text-center">
                   <div class="btn-group">
-                     <a href="edit_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-warning btn-xs"  title="Edit" data-toggle="tooltip">
+                     <a href="edit_order.php?id=<?php echo (int)$order['id'];?>" class="btn btn-warning btn-xs"  title="Edit" data-toggle="tooltip">
                        <span class="glyphicon glyphicon-edit"></span>
                      </a>
-                     <a href="delete_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
+                     <a href="delete_order.php?id=<?php echo (int)$order['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
                        <span class="glyphicon glyphicon-trash"></span>
                      </a>
                   </div>
