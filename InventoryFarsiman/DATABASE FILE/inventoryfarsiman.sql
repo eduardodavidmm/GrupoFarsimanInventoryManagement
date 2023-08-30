@@ -17,6 +17,21 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (8, 'Pruebas'),
 (6, 'Equipo');
 
+CREATE TABLE IF NOT EXISTS `branchs` (
+`id` int(11) unsigned NOT NULL,
+  `name` varchar(60) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `branchs` (`id`, `name`) VALUES
+(1, 'Boulevard Morazan'),
+(3, 'Boulevard Morazan II'),
+(5, 'Boulevard Juan Pablo II'),
+(4, 'Salida Norte'),
+(2, 'Salida Sur'),
+(8, 'Boulevard Centro'),
+(6, '3 Avenida');
+
 CREATE TABLE IF NOT EXISTS `media` (
 `id` int(11) unsigned NOT NULL,
   `file_name` varchar(255) NOT NULL,
@@ -86,25 +101,16 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
 
 
 INSERT INTO `user_groups` (`id`, `group_name`, `group_level`, `group_status`) VALUES
-(1, 'Admin', 1, 1),
+(1, 'Jefe de Tienda', 1, 1),
 (2, 'Usuario Especial', 2, 1),
-(3, 'Jefe de Tienda', 3, 1);
+(3, 'Usuario Regular', 3, 1);
 
-CREATE TABLE IF NOT EXISTS `branch` (
-`id` int(11) NOT NULL,
-  `branch_name` varchar(150) NOT NULL,
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
-
-INSERT INTO `branch` (`id`, `branch_name`) VALUES
-(1, 'Principal'),
-(2, 'Sucursal Norte');
 
 
 ALTER TABLE `categories`
  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name` (`name`);
 
--
+
 ALTER TABLE `media`
  ADD PRIMARY KEY (`id`), ADD KEY `id` (`id`);
 

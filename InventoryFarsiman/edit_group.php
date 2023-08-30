@@ -25,11 +25,9 @@
         $query .= "WHERE ID='{$db->escape($e_group['id'])}'";
         $result = $db->query($query);
          if($result && $db->affected_rows() === 1){
-          //sucess
           $session->msg('s',"Editado ");
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         } else {
-          //failed
           $session->msg('d',' Error');
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         }

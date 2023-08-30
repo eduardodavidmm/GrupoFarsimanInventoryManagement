@@ -7,7 +7,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-th-list"></i>
+      <i class="glyphicon glyphicon-th-large"></i>
        <span>Ordenes de Salida</span>
       </a>
       <ul class="nav submenu">
@@ -17,7 +17,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-signal"></i>
+      <i class="glyphicon glyphicon-th-large"></i>
        <span>Reportes</span>
       </a>
       <ul class="nav submenu">

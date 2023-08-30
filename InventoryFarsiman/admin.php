@@ -1,7 +1,6 @@
 <?php
   $page_title = 'Administración';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
    page_require_level(1);
 ?>
 <?php
@@ -23,7 +22,7 @@
   <div class="row">
     <a href="users.php" style="color:black;">
 		<div class="col-md-3">
-       <div class="panels panel-box clearfix">
+       <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-secondary1">
           <i class="glyphicon glyphicon-user"></i>
         </div>
@@ -37,7 +36,7 @@
 	
 	<a href="categorie.php" style="color:black;">
     <div class="col-md-3">
-       <div class="panels panel-box clearfix">
+       <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-red">
           <i class="glyphicon glyphicon-th-large"></i>
         </div>
@@ -51,7 +50,7 @@
 	
 	<a href="product.php" style="color:black;">
     <div class="col-md-3">
-       <div class="panels panel-box clearfix">
+       <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-blue2">
           <i class="glyphicon glyphicon-shopping-cart"></i>
         </div>
@@ -65,7 +64,7 @@
 	
 	<a href="sales.php" style="color:black;">
     <div class="col-md-3">
-       <div class="panels panel-box clearfix">
+       <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-green">
           <i class="glyphicon glyphicon-usd"></i>
         </div>

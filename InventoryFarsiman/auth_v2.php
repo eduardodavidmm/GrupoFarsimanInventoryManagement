@@ -10,11 +10,8 @@ $password = remove_junk($_POST['password']);
     $user = authenticate_v2($username, $password);
 
         if($user):
-           //create session with id
            $session->login($user['id']);
-           //Update Sign in time
            updateLastLogIn($user['id']);
-           // redirect user to group home page by user level
            if($user['user_level'] === '1'):
              $session->msg("s", "Hola ".$user['username'].", Bienvenido.");
              redirect('admin.php',false);

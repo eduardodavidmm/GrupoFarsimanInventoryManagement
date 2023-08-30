@@ -4,7 +4,6 @@
 ?>
 
 <?php
- // Auto suggetion
     $html = '';
    if(isset($_POST['product_name']) && strlen($_POST['product_name']))
    {
@@ -27,7 +26,6 @@
    }
  ?>
  <?php
- // find all product
   if(isset($_POST['p_name']) && strlen($_POST['p_name']))
   {
     $product_title = remove_junk($db->escape($_POST['p_name']));
@@ -51,7 +49,7 @@
           $html  .= "<input type=\"date\" class=\"form-control datePicker\" name=\"date\" data-date data-date-format=\"yyyy-mm-dd\">";
           $html  .= "</td>";
           $html  .= "<td>";
-          $html  .= "<button type=\"submit\" name=\"add_sale\" class=\"btn btn-primary\">Add sale</button>";
+          $html  .= "<button type=\"submit\" name=\"add_sale\" class=\"btn btn-primary\">Dar Salida</button>";
           $html  .= "</td>";
           $html  .= "</tr>";
 

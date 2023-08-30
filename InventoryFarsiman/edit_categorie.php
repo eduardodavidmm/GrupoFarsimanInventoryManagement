@@ -4,7 +4,6 @@
   page_require_level(1);
 ?>
 <?php
-  //Display all catgories.
   $categorie = find_by_id('categories',(int)$_GET['id']);
   if(!$categorie){
     $session->msg("d","Error");

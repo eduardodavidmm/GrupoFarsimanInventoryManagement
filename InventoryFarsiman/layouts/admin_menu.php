@@ -17,8 +17,14 @@
   </li>
   <li>
     <a href="categorie.php" >
-      <i class="glyphicon glyphicon-indent-left"></i>
+      <i class="glyphicon glyphicon-th-large"></i>
       <span>Categorias</span>
+    </a>
+  </li>
+  <li>
+    <a href="branch.php" >
+      <i class="glyphicon glyphicon-th-large"></i>
+      <span>Sucursales</span>
     </a>
   </li>
   <li>
@@ -33,7 +39,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-credit-card"></i>
+      <i class="glyphicon glyphicon-th-large"></i>
        <span>Ordenes de Salida</span>
       </a>
       <ul class="nav submenu">
@@ -43,7 +49,7 @@
   </li>
   <li>
     <a href="#" class="submenu-toggle">
-      <i class="glyphicon glyphicon-duplicate"></i>
+      <i class="glyphicon glyphicon-th-large"></i>
        <span>Reportes</span>
       </a>
       <ul class="nav submenu">
@@ -51,4 +57,17 @@
         <li><a href="monthly_sales.php">Salidas Mensuales</a></li>
       </ul>
   </li>
+  <li>
+    <a href="orders.php">
+      <i class="glyphicon glyphicon-th-large"></i>
+      <span>Validacion de Ordenes</span>
+    </a>
+  </li>
+  <li>
+    <a href="admin.php">
+      <i class="glyphicon glyphicon-th-large"></i>
+      <span>Panel Administrativo</span>
+    </a>
+  </li>
+  <li>
 </ul>

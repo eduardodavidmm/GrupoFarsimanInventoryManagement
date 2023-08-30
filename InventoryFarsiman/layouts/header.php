@@ -58,11 +58,11 @@
     </header>
     <div class="sidebar sidebarcolor">
       <?php if($user['user_level'] === '1'): ?>
-        <!-- admin menu -->
+        <!-- admin menu store manager -->
       <?php include_once('admin_menu.php');?>
 
       <?php elseif($user['user_level'] === '2'): ?>
-        <!-- Special user -->
+        <!-- Special user / other info -->
       <?php include_once('special_menu.php');?>
 
       <?php elseif($user['user_level'] === '3'): ?>

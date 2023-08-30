@@ -84,8 +84,8 @@ body{
   letter-spacing: .5px;
   padding: 15px;
 }.panel-box{
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   text-align: center;
   border: none;
 }.panel-value{

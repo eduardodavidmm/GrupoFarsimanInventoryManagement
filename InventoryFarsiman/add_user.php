@@ -1,7 +1,6 @@
 <?php
   $page_title = 'Añadir Usuario';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
   page_require_level(1);
   $groups = find_all('user_groups');
 ?>

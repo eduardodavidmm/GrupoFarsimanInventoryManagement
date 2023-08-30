@@ -7,7 +7,7 @@
   </li>
   <li>
     <a href="categorie.php" >
-      <i class="glyphicon glyphicon-indent-left"></i>
+      <i class="glyphicon gglyphicon-th-large"></i>
       <span>Categorias</span>
     </a>
   </li>

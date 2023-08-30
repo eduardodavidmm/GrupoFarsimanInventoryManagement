@@ -1,7 +1,6 @@
 <?php
   $page_title = 'Orden de Salida';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
    page_require_level(3);
 ?>
 <?php
@@ -72,7 +71,6 @@
             <th> Precio </th>
             <th> Cantidad </th>
             <th> Total </th>
-            <th> Fecha de Ingreso</th>
             <th> Vencimiento</th>
             <th> Accion</th>
            </thead>

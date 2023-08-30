@@ -1,28 +1,28 @@
 <?php
-  $page_title = 'Categorias';
+  $page_title = 'Sucursales';
   require_once('includes/load.php');
   page_require_level(1);
   
-  $all_categories = find_all('categories')
+  $all_branchs = find_all('branchs')
 ?>
 <?php
- if(isset($_POST['add_cat'])){
-   $req_field = array('categorie-name');
+ if(isset($_POST['add_bran'])){
+   $req_field = array('branch-name');
    validate_fields($req_field);
-   $cat_name = remove_junk($db->escape($_POST['categorie-name']));
+   $bran_name = remove_junk($db->escape($_POST['branch-name']));
    if(empty($errors)){
-      $sql  = "INSERT INTO categories (name)";
-      $sql .= " VALUES ('{$cat_name}')";
+      $sql  = "INSERT INTO branchs (name)";
+      $sql .= " VALUES ('{$bran_name}')";
       if($db->query($sql)){
-        $session->msg("s", "Nueva Categoria");
-        redirect('categorie.php',false);
+        $session->msg("s", "Nueva Sucursal");
+        redirect('branch.php',false);
       } else {
         $session->msg("d", "Error");
-        redirect('categorie.php',false);
+        redirect('branch.php',false);
       }
    } else {
      $session->msg("d", $errors);
-     redirect('categorie.php',false);
+     redirect('branch.php',false);
    }
  }
 ?>
@@ -39,15 +39,15 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Añadir Nueva Categoria</span>
+            <span>Añadir Nueva Sucursal</span>
          </strong>
         </div>
         <div class="panel-body">
-          <form method="post" action="categorie.php">
+          <form method="post" action="branch.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
+                <input type="text" class="form-control" name="branch-name" placeholder="Sucursal" Name">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Añadir Categoria</button>
+            <button type="submit" name="add_bran" class="btn btn-primary">Añadir Sucursal</button>
         </form>
         </div>
       </div>
@@ -57,7 +57,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Categorias</span>
+          <span>Sucursales</span>
        </strong>
       </div>
         <div class="panel-body">
@@ -65,21 +65,21 @@
             <thead>
                 <tr>
                     <th class="text-center" style="width: 50px;">#</th>
-                    <th>Categorias</th>
+                    <th>Sucursal</th>
                     <th class="text-center" style="width: 100px;">Acciones</th>
                 </tr>
             </thead>
             <tbody>
-              <?php foreach ($all_categories as $cat):?>
+              <?php foreach ($all_branchs as $bran):?>
                 <tr>
                     <td class="text-center"><?php echo count_id();?></td>
-                    <td><?php echo remove_junk(ucfirst($cat['name'])); ?></td>
+                    <td><?php echo remove_junk(ucfirst($bran['name'])); ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a href="edit_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                        <a href="edit_branch.php?id=<?php echo (int)$bran['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
                           <span class="glyphicon glyphicon-edit"></span>
                         </a>
-                        <a href="delete_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                        <a href="delete_branch.php?id=<?php echo (int)$bran['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
                           <span class="glyphicon glyphicon-trash"></span>
                         </a>
                       </div>
