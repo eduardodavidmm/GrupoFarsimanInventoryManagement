@@ -39,7 +39,7 @@ Password: user
 ### Detallado Grafico 
 
 ![Login](/InventoryFarsiman/libs/images/login.png)
-![DB](/InventoryFarsiman/libs/images/databaase.png)
+![DB](/InventoryFarsiman/libs/images/database.png)
 ![Branch](/InventoryFarsiman/libs/images/branchs.png)
 ![dash](/InventoryFarsiman/libs/images/dashboard.png)
 ![products](/InventoryFarsiman/libs/images/products.png)
