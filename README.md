@@ -8,6 +8,13 @@ Demo de sistema de inventarios para Grupo Farsiman como parte del proceso de eva
 ### Especificaciones del Desarrollo
 El sistema fue desarrollado en PHP bajo un entorno web con MySQL como gestor de base de datos, cuenta con datos para prueba y sus validaciones correspondientes.Desarrollado en PHP ya que es un lenguaje de programación interpretado​ del lado del servidor y de uso general que se adapta especialmente al desarrollo web, por lo tanto permite trabajar backend y frontend facilmente.
 
+### Recursos Utilizados
+* PHP
+* MySQL
+* HTML / CSS
+* Bootstrap
+* Javascript
+
 > [!NOTE]
 > Se pueden crear usuarios y roles pero listare los creados para que sea mas facil el proceso de revision.
 
@@ -16,24 +23,25 @@ Crear Base de Datos en MySQL con el nombre inventoryfarsiman, importar el archiv
 
 **Usuario Jefe de Tienda Administrador / Grupo Farsiman 2023**
 
-*Username: admin
-*Password: admin
+Username: admin
+Password: admin
 
 **Usuario Especial**
 
-*Username: special
-*Password: special
+Username: special
+Password: special
 
 **Usuario regular**
 
-*Username: user
-*Password: user 
+Username: user
+Password: user 
 
 ### Detallado Grafico 
 
 ![Login](/InventoryFarsiman/libs/images/login.png)
-![Login](/InventoryFarsiman/libs/images/branchs.png)
-![Login](/InventoryFarsiman/libs/images/dashboard.png)
-![Login](/InventoryFarsiman/libs/images/products.png)
-![Login](/InventoryFarsiman/libs/images/addproduct.png)
-![Login](/InventoryFarsiman/libs/images/ordersreport.png)
+![DB](/InventoryFarsiman/libs/images/databaase.png)
+![Branch](/InventoryFarsiman/libs/images/branchs.png)
+![dash](/InventoryFarsiman/libs/images/dashboard.png)
+![products](/InventoryFarsiman/libs/images/products.png)
+![producstadd](/InventoryFarsiman/libs/images/addproduct.png)
+![ordersreport](/InventoryFarsiman/libs/images/ordersreport.png)

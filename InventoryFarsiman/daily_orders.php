@@ -29,7 +29,7 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Product name </th>
+                <th> Producto </th>
                 <th class="text-center" style="width: 15%;"> Cantidad Vendida</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
                 <th class="text-center" style="width: 15%;"> Fecha </th>

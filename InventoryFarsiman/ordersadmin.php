@@ -18,10 +18,10 @@ $orders = find_all_order();
         <div class="panel-heading clearfix">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Todas las Salidas</span>
+            <span>Salidas Pendientes</span>
           </strong>
           <div class="pull-right">
-            <a href="add_order.php" class="btn btn-primary">Añadir Salida</a>
+            <a href="add_order.php" class="btn btn-primary">Generar Orden de Salida</a>
           </div>
         </div>
         <div class="panel-body">
@@ -29,10 +29,10 @@ $orders = find_all_order();
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Product name </th>
+                <th> Producto en Orden </th>
                 <th class="text-center" style="width: 15%;"> Cantidad</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
-                <th class="text-center" style="width: 15%;"> Date </th>
+                <th class="text-center" style="width: 15%;"> Fecha </th>
                 <th class="text-center" style="width: 100px;"> Acciones </th>
              </tr>
             </thead>
